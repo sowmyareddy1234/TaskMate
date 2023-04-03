@@ -52,15 +52,12 @@ def index(request):
     return render(request,'index.html',context)
 
 def about(request):
-    context= {
-        'about_text':'well come about',
-        }
-    return render(request,'about.html',context)
+    return render(request,'about.html')
 @login_required
 def contact(request):
     context= {
         'contact_text':'well come contact us',
-        }
+    }
     return render(request,'contact.html',context)
 def complete_task(request,task_id):
     task = Tasklist.objects.get(pk=task_id)
