@@ -4,20 +4,22 @@
 {% endblock title %}
 
 {% block content %}
-    <div class="modal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title">Modal title</h1>
-        </div>
-            <div class="modal-body">
-              <p>Modal body text goes here.Modal body text goes here.Modal body text goes here.</br>Modal body text goes here.Modal body text goes here.</p>
-            </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
+<style>
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+</style>
+   <div class="about-section">
+      <h1>About Us Page</h1>
+      <p>Taskers perform Tasks for Requesters in their own individual capacity as independent </br>
+          contractors and not as employees of a Requester, Google, or Google affiliates. These Task Mate Terms do not</br>
+          create an association, joint venture, partnership, franchise, or employer/employee relationship between You and Requesters; You and</br>
+          Google; or You and Google affiliates.</p>
+          <a href="{% url 'index' %}">
+            <button class="btn btn-info" type="submit">Home</button>
+          </a>
     </div>
 {% endblock content %}
