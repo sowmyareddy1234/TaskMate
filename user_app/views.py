@@ -5,7 +5,7 @@ from django.contrib import messages
 
 
 def register(request):
-    if request.method =='POST':
+    if request.method == 'POST':
         register_form=Custom_register_form(request.POST or None)
         if register_form.is_valid():
             register_form.save()

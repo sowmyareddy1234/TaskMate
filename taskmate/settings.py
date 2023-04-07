@@ -13,11 +13,11 @@ import os
 from pathlib import Path
 import environ
 
-env=environ.Env()
-environ.Env.read_env()
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+env=environ.Env(SECRET_KEY=str,)
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -29,8 +29,10 @@ SECRET_KEY = env('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DJANGO_DEBUG')
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1','taskmate-production.up.railway.app']
-CSRF_TRUSTED_ORIGINS = ['https://taskmate-production.up.railway.app']
+ALLOWED_HOSTS= [env('DJANGO_ALLOWED_HOST')]
+
+#ALLOWED_HOSTS = ['localhost', '127.0.0.1','taskmate-production.up.railway.app']
+#CSRF_TRUSTED_ORIGINS = ['https://taskmate-production.up.railway.app']
 
 # Application definition
 
@@ -93,11 +95,11 @@ WSGI_APPLICATION = 'taskmate.wsgi.application'
 DATABASES = {
     'default':{
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('DJANGO_DB_NAME'),
-        'USER': env('DJANGO_DB_USER'),
-        'PASSWORD': env('DJANGO_DB_PASSWORD'),
-        'HOST': env('DJANGO_DB_HOST'),
-        'PORT': env('DJANGO_DB_PORT'),
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': '1234.sow',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
