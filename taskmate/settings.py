@@ -96,11 +96,11 @@ WSGI_APPLICATION = 'taskmate.wsgi.application'
 DATABASES = {
     'default':{
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'djangodatabase',
-        'USER': 'sowmya',
-        'PASSWORD': '1234.sow',
-        'HOST': 'localhost',
-        'PORT': '2022',
+        'NAME': env('DJANGO_NAME'),
+        'USER':env('DJANGO_USER'),
+        'PASSWORD':env('DJANGO_PASSWORD'),
+        'HOST':env('DJANGO_HOST'),
+        'PORT':env('DJANGO_PORT'),
     }
 }
 
