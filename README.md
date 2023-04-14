@@ -29,7 +29,7 @@ TaskMate is a task manager web application build using Django Framework. The aim
 
 # Demo
 
-Deployed on Railway - 
+Deployed on Railway - https://taskmate-production.up.railway.app/
 
 Username: demo
 Password: demo@123
