@@ -30,9 +30,9 @@ SECRET_KEY =env('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DJANGO_DEBUG')
 
-#ALLOWED_HOSTS= [' sowmya2022.pythonanywhere.com']
+ALLOWED_HOSTS= ['*']
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1',' sowmya2022.pythonanywhere.com']
+#ALLOWED_HOSTS = ['localhost', '127.0.0.1',' sowmya2022.pythonanywhere.com']
 #CSRF_TRUSTED_ORIGINS = ['https://taskmate-production.up.railway.app']
 
 # Application definition
@@ -100,7 +100,7 @@ DATABASES = {
         'USER':env('DJANGO_USER'),
         'PASSWORD':env('DJANGO_PASSWORD'),
         'HOST':env('DJANGO_HOST'),
-        'PORT':env('DJANGO_PORT'),
+        'PORT' : env('DJANGO_PORT')
     }
 }
 
